@@ -10,16 +10,16 @@ may be useful in other environments, too ( developers? ;) )
 
 Install one or more JDKs ( edit :) )
 
-Then source `jdk_switcher.sh` in the repository root and use the `jdk_switcher` function with one argument
+Then source `jdk_switcher_mac.sh` in the repository root and use the `jdk_switcher` function with one argument
 
 ``` bash
-. ./jdk_switcher.sh
+. ./jdk_switcher_mac.sh
 
-switch_jdk 6
+jdk_switcher use 6
 ...
-switch_jdk 1.6
-switch_jdk 7
-switch_jdk 8
+jdk_switcher use 1.6
+jdk_switcher use 7
+jdk_switcher home 8
 
 ```
 
@@ -41,12 +41,14 @@ Supported aliases are:
 
 ## How does it work?
 
-`JAVA_HOME` changes is the reason why `jdk_switcher` is implemented as a function.
+Changes `JAVA_HOME` and includes `$JAVA_HOME/bin/` in $PATH, so same Java version
+will be referenced in $JAVA_HOME and $PATH
 
 
 ## Why was this tool necessary?
 
-`JAVA_HOME` allows you ti change between installed versions of jdk in mac.
+Because it was a mess to change version of JDK according to project i was working on,
+sometimes several at same time.
 
 ## License & Copyright
 

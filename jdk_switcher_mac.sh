@@ -7,7 +7,7 @@
 
 
     if [ "$(uname)" = "Darwin" ]; then
-        echo "=> JDK SWITCHER"
+        echo "✔ JDK SWITCHER"
     else
         echo "You are not running Darwing, bye" >&2
     fi
